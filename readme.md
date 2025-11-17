@@ -3,6 +3,8 @@
 Ein modernes, webbasiertes Umfragetool für Live-Abstimmungen und Präsentationen mit Echtzeit-Ergebnissen von [Paul Horstmann](mailto:paul.horstmann@hs-osnabrueck.de) und Leon Seeger für die Lehrveranstaltung „Verteilte Systeme” der Hochschule Osnabrück.
 
 
+Ein modernes, webbasiertes Umfragetool für Live-Abstimmungen und Präsentationen mit Echtzeit-Ergebnissen von [Paul Horstmann](mailto:paul.horstmann@hs-osnabrueck.de) und Leon Seeger für die Lehrveranstaltung „Verteilte Systeme” im Sommersemester 2025 der Hochschule Osnabrück.
+
 ## Features
 
 - **Interaktive Umfragen**: Erstellen Sie Single-Choice und Multiple-Choice Umfragen
