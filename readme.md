@@ -1,6 +1,7 @@
 # LivePoll
 
-Ein modernes, webbasiertes Umfragentool für Live-Abstimmungen und Präsentationen mit Echtzeit-Ergebnissen.
+Ein modernes, webbasiertes Umfragetool für Live-Abstimmungen und Präsentationen mit Echtzeit-Ergebnissen von [Paul Horstmann](mailto:paul.horstmann@hs-osnabrueck.de) und Leon Seeger für die Lehrveranstaltung „Verteilte Systeme” der Hochschule Osnabrück.
+
 
 ## Features
 
