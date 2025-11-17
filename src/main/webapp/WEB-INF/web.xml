@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+    
+    <!-- JSP Configuration for UTF-8 Encoding -->
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <page-encoding>UTF-8</page-encoding>
+            <scripting-invalid>false</scripting-invalid>
+            <trim-directive-whitespaces>true</trim-directive-whitespaces>
+        </jsp-property-group>
+    </jsp-config>
+
+    
+    <!-- Welcome File List -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <!-- Session Configuration -->
+    <session-config>
+        <session-timeout>3000</session-timeout>
+    </session-config>
+    
+    <!-- Explicit Servlet Mappings -->
+    <servlet>
+        <servlet-name>DashboardServlet</servlet-name>
+        <servlet-class>link.hsos.livepoll.servlet.dashboard.DashboardServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>DashboardServlet</servlet-name>
+        <url-pattern>/dashboard</url-pattern>
+        <url-pattern>/dashboard/</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>CreatePollServlet</servlet-name>
+        <servlet-class>link.hsos.livepoll.servlet.dashboard.CreatePollServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>CreatePollServlet</servlet-name>
+        <url-pattern>/dashboard/create</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ActivePollsServlet</servlet-name>
+        <servlet-class>link.hsos.livepoll.servlet.dashboard.ActivePollsServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>ActivePollsServlet</servlet-name>
+        <url-pattern>/dashboard/active</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>PollDetailServlet</servlet-name>
+        <servlet-class>link.hsos.livepoll.servlet.dashboard.PollDetailServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>PollDetailServlet</servlet-name>
+        <url-pattern>/dashboard/poll/*</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>PollPresentationServlet</servlet-name>
+        <servlet-class>link.hsos.livepoll.servlet.dashboard.PollPresentationServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>PollPresentationServlet</servlet-name>
+        <url-pattern>/presentation/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PollApiServlet</servlet-name>
+        <servlet-class>link.hsos.livepoll.servlet.api.PollApiServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>PollApiServlet</servlet-name>
+        <url-pattern>/api/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SignInServlet</servlet-name>
+        <servlet-class>link.hsos.livepoll.servlet.auth.SignInServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>SignInServlet</servlet-name>
+        <url-pattern>/auth/sign_in</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>SignOutServlet</servlet-name>
+        <servlet-class>link.hsos.livepoll.servlet.auth.SignOutServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>SignOutServlet</servlet-name>
+        <url-pattern>/auth/sign_out</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>AADRedirectServlet</servlet-name>
+        <servlet-class>link.hsos.livepoll.servlet.auth.AADRedirectServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>AADRedirectServlet</servlet-name>
+        <url-pattern>/auth/redirect</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PollParticipantServlet</servlet-name>
+        <servlet-class>link.hsos.livepoll.servlet.PollParticipantServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>PollParticipantServlet</servlet-name>
+        <url-pattern>/poll/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ShortCodeServlet</servlet-name>
+        <servlet-class>link.hsos.livepoll.servlet.ShortCodeServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>ShortCodeServlet</servlet-name>
+        <url-pattern>/s/*</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Error Pages -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/index.jsp</location>
+    </error-page>
+    
+    <error-page>
+        <error-code>500</error-code>
+        <location>/index.jsp</location>
+    </error-page>
+    
+</web-app>

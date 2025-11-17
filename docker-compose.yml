@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  livepoll:
+    build: .
+    container_name: livepoll-app
+    env_file:
+      - .env
+    ports:
+      - "8089:8080"
+    environment:
+      - DATABASE_PATH=/app/db
+      - DATABASE_NAME=livepoll
+      - DATABASE_USER=sa
+      - DATABASE_PASSWORD=
+      - DATABASE_AUTO_SERVER=true
+      
+      - HIBERNATE_DIALECT=org.hibernate.dialect.H2Dialect
+      - HIBERNATE_HBM2DDL_AUTO=update
+      - HIBERNATE_SHOW_SQL=false
+      - HIBERNATE_FORMAT_SQL=false
+      
+      - AAD_CLIENT_ID=${AAD_CLIENT_ID:-2257147c-9833-4d22-ae6a-a34661156c4e}
+      - AAD_SECRET=${AAD_SECRET:-cFl8Q~mWN5Nap51u59z3ozoVbcSbk7oWnhAdga1z}
+      - AAD_AUTHORITY=${AAD_AUTHORITY:-https://login.microsoftonline.com/12ad2103-ef1e-40db-a362-4178e50d61ef}
+      - AAD_SCOPES=${AAD_SCOPES:-openid profile offline_access}
+      
+      - APP_HOME_PAGE=${APP_HOME_PAGE:-http://localhost:8089}
+      - APP_DASHBOARD=${APP_DASHBOARD:-http://localhost:8089/dashboard}
+      - APP_REDIRECT_ENDPOINT=${APP_REDIRECT_ENDPOINT:-/auth/redirect}
+      - APP_STATE_TTL=${APP_STATE_TTL:-600}
+      - APP_SESSION_PARAM=${APP_SESSION_PARAM:-msalAuth}
+      - APP_AUTH_DISABLED=${APP_AUTH_DISABLED:-false}
+      
+      - ADD_HMAC_SECRET=${ADD_HMAC_SECRET:-60a56df88c1bca84e0215897d0bdc167c719b47e12c7d71842e10ae6f3fa5035}
+      
+      - JAVA_OPTS=-Xms512m -Xmx1024m -XX:+UseG1GC -XX:+UseStringDeduplication
+      
+    volumes:
+      - livepoll_db:/app/db
+      - livepoll_logs:/usr/local/tomcat/logs
+      - livepoll_sessions:/usr/local/tomcat/sessions
+      
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+volumes:
+  livepoll_db:
+    driver: local
+  livepoll_logs:
+    driver: local
+  livepoll_sessions:
+    driver: local
+
+networks:
+  default:
+    name: livepoll-network

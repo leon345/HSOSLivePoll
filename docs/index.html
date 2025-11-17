@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benutzerhandbuch - LivePoll Umfragentool</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="./assets/img/logo.svg" alt="LivePoll Logo" style="height: 40px; margin-right: 15px;">
+                <div class="logo-text">LivePoll Benutzerhandbuch</div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <h2>Inhaltsverzeichnis</h2>
+        <ul>
+            <li><a href="#einfuehrung">Einführung</a></li>
+            <li><a href="#landing-page">Landing Page</a></li>
+            <li><a href="#umfrage-erstellen">Umfrage erstellen</a></li>
+            <li><a href="#umfrage-typen">Umfrage-Typen</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#anmeldung">Anmeldung mit Microsoft</a></li>
+            <li><a href="#abstimmung">Abstimmung</a></li>
+            <li><a href="#prasentation">Präsentationsmodus</a></li>
+            <li><a href="#import-export">Importieren & Exportieren</a></li>
+            <li><a href="#faq">Häufige Fragen</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <div class="info-box" style="background-color: #e3f2fd; border: 2px solid #2196f3; border-radius: 8px; padding: 20px; margin: 20px 0; text-align: center;">
+            <p style="margin: 10px 0; font-size: 16px;"><strong>Die LivePoll-Anwendung ist in einer Testumgebung unter <a href="https://poll.hsos.link" target="_blank" style="color: #1976d2; text-decoration: underline;">poll.hsos.link</a> verfügbar.</strong></p>
+            <p style="margin: 10px 0; color: #666;">Dort können Sie alle Funktionen mit dem Test-Account ausprobieren.</p>
+        </div>
+
+        <div class="section" id="einfuehrung">
+            <h2>Einführung</h2>
+            <p>Willkommen beim LivePoll Umfragentool! Diese Anwendung ermöglicht es Ihnen, interaktive Umfragen zu erstellen, durchzuführen und die Ergebnisse in Echtzeit zu verfolgen.</p>
+            
+            <div class="feature-box">
+                <h4>Hauptfunktionen:</h4>
+                <ul>
+                    <li>Erstellen von Umfragen mit verschiedenen Fragetypen</li>
+                    <li>Echtzeit-Abstimmung über QR-Codes oder Kurzlinks</li>
+                    <li>Live-Präsentation der Ergebnisse</li>
+                    <li>Benutzerfreundliche Oberfläche</li>
+                    <li>Sichere Anmeldung über Microsoft Azure AD</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section" id="landing-page">
+            <h2>Landing Page</h2>
+            <p>Die Landing Page ist der erste Kontaktpunkt für alle Benutzer des Umfragentools.</p>
+            
+            <div class="screenshot">
+                <img src="./assets/img/landingpage.png" alt="Landing Page Screenshot" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+                <br>Landing Page mit Logo und Hauptfunktionen
+            </div>
+
+            <h3>Verfügbare Aktionen:</h3>
+            <ul>
+                <li><strong>An einer Umfrage teilnehmen:</strong> Geben Sie den Kurzcode ein und klicken Sie auf den Pfeil</li>
+                <li><strong>Neue Umfrage erstellen:</strong> Klicken Sie auf "Umfrage erstellen" (erfordert Anmeldung)</li>
+            </ul>
+
+            <div class="note">
+                <h4>Tipp</h4>
+                <p>Sie können direkt über den Kurzcode an einer Umfrage teilnehmen, ohne sich anmelden zu müssen.</p>
+            </div>
+        </div>
+
+        <div class="section" id="umfrage-erstellen">
+            <h2>Umfrage erstellen</h2>
+            <p>Nach der Anmeldung können Sie neue Umfragen erstellen und verwalten.</p>
+
+            <h3>Schritte zum Erstellen einer Umfrage:</h3>
+            <ol class="step-list">
+                <li>Melden Sie sich mit Ihrem Microsoft-Konto an</li>
+                <li>Klicken Sie auf "Neue Umfrage erstellen" im Dashboard</li>
+                <li>Füllen Sie die Umfrage-Details aus</li>
+                <li>Klicken Sie auf "Umfrage erstellen"</li>
+            </ol>
+
+            <div class="screenshot">
+                <img src="./assets/img/neueUmfrage.png" alt="Umfrage-Erstellungsformular Screenshot" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+                <br>Formular zum Erstellen einer neuen Umfrage
+            </div>
+
+            <div class="feature-box">
+                <h4>Wichtige Felder:</h4>
+                <ul>
+                    <li><strong>Titel:</strong> Kurzer, beschreibender Name für die Umfrage</li>
+                    <li><strong>Optionen:</strong> Antwortmöglichkeiten (mindestens 2, maximal 10)</li>
+                    <li><strong>Typ:</strong> Wählen Sie zwischen "Single Choice" und "Multiple Choice"</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section" id="umfrage-typen">
+            <h2>Umfrage-Typen</h2>
+            <p>Das System unterstützt zwei verschiedene Umfragetypen:</p>
+
+            <div class="grid">
+                <div class="card">
+                    <h4>Single Choice</h4>
+                    <p>Teilnehmer können nur eine Antwort auswählen. Ideal für Entscheidungsfindung und Meinungsumfragen.</p>
+                    <ul>
+                        <li>Eine Stimme pro Teilnehmer</li>
+                        <li>Eindeutige Ergebnisse</li>
+                        <li>Perfekt für Abstimmungen</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h4>Multiple Choice</h4>
+                    <p>Teilnehmer können mehrere Antworten auswählen. Gut für Umfragen mit mehreren Präferenzen.</p>
+                    <ul>
+                        <li>Mehrere Stimmen möglich</li>
+                        <li>Flexiblere Antworten</li>
+                        <li>Ideal für Präferenzumfragen</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="note">
+                <h4>Wichtig</h4>
+                <p>Der Umfragetyp kann nach der Erstellung nicht mehr geändert werden. Wählen Sie sorgfältig aus!</p>
+            </div>
+        </div>
+
+        <div class="section" id="dashboard">
+            <h2>Dashboard</h2>
+            <p>Das Dashboard ist Ihr zentraler Verwaltungsbereich für alle Umfragen.</p>
+
+            <div class="note">
+                <h4>Wichtig</h4>
+                <p>Wenn Sie versuchen, auf das Dashboard zuzugreifen, werden Sie automatisch zur Anmeldeseite weitergeleitet, falls Sie noch nicht angemeldet sind.</p>
+            </div>
+
+            <div class="screenshot">
+                <img src="./assets/img/dashboard.png" alt="Dashboard Screenshot" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+                <br>Übersicht aller Umfragen und Verwaltungsfunktionen
+            </div>
+
+            <h3>Dashboard-Funktionen:</h3>
+            <ul>
+                <li><strong>Aktive Umfragen:</strong> Übersicht aller laufenden Umfragen</li>
+                <li><strong>Letzte Umfragen:</strong> Schnellzugriff auf kürzlich erstellte Umfragen</li>
+                <li><strong>Neue Umfrage:</strong> Button zum Erstellen einer neuen Umfrage</li>
+                <li><strong>Umfrage-Details:</strong> Klicken Sie auf eine Umfrage für detaillierte Informationen</li>
+            </ul>
+        </div>
+
+        <div class="section" id="anmeldung">
+            <h2>Anmeldung mit Microsoft</h2>
+            <p>Das Umfragentool verwendet Microsoft Azure Active Directory für eine sichere Authentifizierung.</p>
+
+            <div class="note">
+                <h4>Wichtig</h4>
+                <p>Für die Anmeldung können in der Testversion nur Test-Accounts verwendet werden. Persönliche Microsoft-Konten werden nicht unterstützt.</p>
+            </div>
+
+            <h3>Anmeldeprozess:</h3>
+            <ol class="step-list">
+                <li>Klicken Sie auf "Anmelden" in der oberen rechten Ecke</li>
+                <li>Sie werden zur Microsoft-Anmeldeseite weitergeleitet</li>
+                <li>Geben Sie Ihre persönlichen Microsoft-Anmeldedaten ein</li>
+                <li>Bestätigen Sie die Anmeldung (falls erforderlich)</li>
+                <li>Sie werden zurück zum Umfragentool geleitet</li>
+            </ol>
+
+            <div class="screenshot">
+                <img src="./assets/img/microsoft.png" alt="Microsoft-Anmeldeseite Screenshot" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+                <br>Microsoft Azure AD Anmeldeseite
+            </div>
+
+            <div class="feature-box">
+                <h4>Sicherheitsvorteile:</h4>
+                <ul>
+                    <li>Zweifaktor-Authentifizierung (falls aktiviert)</li>
+                    <li>Sichere Verbindung über HTTPS</li>
+                    <li>Keine Passwörter werden im System gespeichert</li>
+                    <li>Automatische Abmeldung bei Inaktivität</li>
+                </ul>
+            </div>
+
+            <h3>Unterstützte Kontotypen in der Testversion:</h3>
+            <ul>
+                <li><strong>Unterstützt:</strong> Test-Accounts für Entwicklungs- und Testzwecke oder eingetragene Microsoft-Konten</li>
+                <li><strong>Nicht unterstützt:</strong> Persönliche Microsoft-Konten (@outlook.com, @hotmail.com, @live.com), Unternehmens-Konten von Microsoft 365, Azure AD, oder andere Organisations-Konten</li>
+            </ul>
+
+            <h3>Anmeldedaten für die Testversion:</h3>
+            <div class="feature-box">
+                <h4>Zugangsdaten:</h4>
+                <ul>
+                    <li><strong>E-Mail:</strong> HSOSVerteilteSysteme@leonseegergmail.onmicrosoft.com</li>
+                    <li><strong>Passwort:</strong> K6.7v_Cs@o2@qH</li>
+                </ul>
+                <p><strong>Backup für Passwort:</strong> <a href="https://share.1password.com/s#bpzwz8HY-HA4WBqpolhuFtGgz7cZ_zW32_SioAamiqM" target="_blank" rel="noopener noreferrer">https://share.1password.com/s#bpzwz8HY-HA4WBqpolhuFtGgz7cZ_zW32_SioAamiqM</a></p>
+            </div>
+
+            <h3>Abmeldung:</h3>
+            <p>Klicken Sie auf "Abmelden" in der rechten oberen Ecke.</p>
+        </div>
+
+        <div class="section" id="abstimmung">
+            <h2>Abstimmung</h2>
+            <p>Teilnehmer können über verschiedene Wege an Umfragen teilnehmen.</p>
+
+            <h3>Teilnahme-Methoden:</h3>
+            <div class="grid">
+                <div class="card">
+                    <h4>QR-Code</h4>
+                    <p>Scannen Sie den QR-Code mit Ihrem Smartphone</p>
+                </div>
+                <div class="card">
+                    <h4>Kurzlink</h4>
+                    <p>Geben Sie den Kurzcode auf der Landing Page ein</p>
+                </div>
+                <div class="card">
+                    <h4>Direkter Link</h4>
+                    <p>Öffnen Sie den generierten Link in einem Browser</p>
+                </div>
+            </div>
+
+            <div class="screenshot">
+                <img src="./assets/img/abstimmen.png" alt="Abstimmungsseite Screenshot" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+                <br>Abstimmungsseite mit Frage und Antwortoptionen
+            </div>
+
+            <h3>Abstimmungsprozess:</h3>
+            <ol class="step-list">
+                <li>Öffnen Sie die Abstimmungsseite</li>
+                <li>Lesen Sie die Frage und Antwortoptionen</li>
+                <li>Wählen Sie Ihre Antwort(en) aus</li>
+                <li>Klicken Sie auf "Abstimmen"</li>
+            </ol>
+
+            <div class="note">
+                <h4>Tipp</h4>
+                <p>Nach der Abstimmung können Sie die aktuellen Ergebnisse sehen. Ihre Stimme wird anonym behandelt.</p>
+            </div>
+        </div>
+
+        <div class="section" id="prasentation">
+            <h2>Präsentationsmodus</h2>
+            <p>Der Präsentationsmodus zeigt die Umfrageergebnisse in Echtzeit an.</p>
+
+            <div class="screenshot">
+                <img src="./assets/img/prasentation.png" alt="Präsentationsmodus Screenshot" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+                <br>Live-Anzeige der Umfrageergebnisse
+            </div>
+
+            <h3>Präsentationsfunktionen:</h3>
+            <ul>
+                <li><strong>Live-Updates:</strong> Ergebnisse werden in Echtzeit aktualisiert</li>
+                <li><strong>Grafische Darstellung:</strong> Balkendiagramme und Prozentangaben</li>
+                <li><strong>Responsive Design:</strong> Funktioniert auf allen Bildschirmgrößen</li>
+                <li><strong>Teilnehmerzahl:</strong> Anzeige der Gesamtanzahl der Stimmen</li>
+            </ul>
+
+            <h3>Verwendung:</h3>
+            <p>Öffnen Sie den Präsentationsmodus über das Dashboard und projizieren Sie ihn auf einen großen Bildschirm oder Beamer. Die Ergebnisse werden automatisch aktualisiert, wenn neue Stimmen eingehen.</p>
+        </div>
+
+        <div class="section" id="import-export">
+            <h2>Importieren & Exportieren</h2>
+            <p>Das LivePoll Umfragentool bietet umfangreiche Funktionen zum Importieren und Exportieren von Umfragen und Ergebnissen.</p>
+
+            <h3>Umfragen exportieren</h3>
+            <p>Sie können bestehende Umfragen als XML-Vorlage exportieren, um sie später wiederzuverwenden oder mit anderen zu teilen.</p>
+
+            <div class="feature-box">
+                <h4>Export-Funktionen:</h4>
+                <ul>
+                    <li><strong>XML-Export:</strong> Exportieren Sie Umfragen als XML-Datei</li>
+                    <li><strong>Wiederverwendung:</strong> Importieren Sie exportierte Umfragen als Vorlage</li>
+                    <li><strong>Teilen:</strong> Teilen Sie Umfragevorlagen mit Kollegen</li>
+                    <li><strong>Backup:</strong> Sichern Sie Ihre Umfragen lokal</li>
+                </ul>
+            </div>
+
+            <h3>Umfragen importieren</h3>
+            <p>Importieren Sie zuvor exportierte Umfragen oder Vorlagen, um schnell neue Umfragen zu erstellen.</p>
+
+            <div class="grid">
+                <div class="card">
+                    <h4>Import-Prozess:</h4>
+                    <ol>
+                        <li>Wählen Sie "Neue Umfrage erstellen" im Dashboard</li>
+                        <li>Klicken Sie auf "XML importieren"</li>
+                        <li>Wählen Sie eine XML-Datei aus</li>
+                        <li>Überprüfen Sie die importierten Daten</li>
+                        <li>Passen Sie bei Bedarf Titel oder Optionen an</li>
+                        <li>Erstellen Sie die Umfrage</li>
+                    </ol>
+                </div>
+
+                <div class="card">
+                    <h4>Unterstützte Formate:</h4>
+                    <ul>
+                        <li><strong>XML-Dateien:</strong> Standardformat für Umfragevorlagen</li>
+                        <li><strong>Kompatibilität:</strong> Alle exportierten XML-Dateien können wieder importiert werden</li>
+                        <li><strong>Validierung:</strong> Automatische Überprüfung der Import-Daten</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Ergebnisse exportieren</h3>
+            <p>Exportieren Sie Umfrageergebnisse für weitere Analysen oder Berichte.</p>
+
+            <div class="feature-box">
+                <h4>Export-Optionen:</h4>
+                <ul>
+                    <li><strong>CSV-Format:</strong> Kompatibel mit Excel, Google Sheets und anderen Tabellenkalkulationsprogrammen</li>
+                    <li><strong>Vollständige Daten:</strong> Alle Abstimmungen mit Zeitstempel</li>
+                    <li><strong>Statistiken:</strong> Zusammenfassende Ergebnisse und Prozentangaben</li>
+                    <li><strong>Offline-Analyse:</strong> Arbeiten Sie mit den Daten außerhalb des Systems</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section" id="faq">
+            <h2>Häufige Fragen</h2>
+            
+            <div class="grid">
+                <div class="card">
+                    <h4>Kann ich eine Umfrage nach der Erstellung bearbeiten?</h4>
+                    <p>Nein, die Umfrage muss neu erstellt werden. Man kann auch die Umfrage als XML-Vorlage speichern und dann eine neue Umfrage mit den gleichen Einstellungen erstellen.</p>
+                </div>
+
+                <div class="card">
+                    <h4>Warum ist die Umfrage nicht aktiv?</h4>
+                    <p>Umfragen müssen erst aktiviert werden, bevor sie für Teilnehmer sichtbar sind.</p>
+                </div>
+
+                <div class="card">
+                    <h4>Können Teilnehmer mehrfach abstimmen?</h4>
+                    <p>Es kann eingestellt werden, dass ein Teilnehmer nur einmal abstimmen kann. Standardmäßig ist diese Einstellung deaktiviert.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4>Kann ich die Ergebnisse exportieren?</h4>
+                    <p>Ja, die Ergebnisse können exportiert werden als CSV Datei</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('.navbar a');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

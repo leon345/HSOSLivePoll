@@ -1,0 +1,131 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+
+.landing-center {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-logo {
+    width: 180px;
+    margin-bottom: 2.5rem;
+}
+
+.landing-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 340px;
+}
+
+.landing-label {
+    color: #b0b0b0;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    width: 100%;
+}
+
+.landing-input-row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.landing-input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px 0 0 8px!important;
+    font-size: 1.25rem;
+    outline: none;
+    background: #fafbfc;
+    color: #444;
+    transition: border 0.2s;
+}
+
+.landing-input:focus {
+    border-color: #6ea8fe;
+}
+
+.landing-btn-go {
+    background: #6ea8fe;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-btn-go:hover {
+    background: #4d8be6;
+}
+
+.landing-divider {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0 1.5rem 0;
+}
+
+.landing-divider-line {
+    flex: 1;
+    height: 1px;
+    background: #e0e0e0;
+}
+
+.landing-divider-text {
+    margin: 0 1rem;
+    color: #b0b0b0;
+    font-size: 1rem;
+}
+
+.landing-btn-create {
+    background: #6ea8fe;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.8rem 2.2rem;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    transition: background 0.2s;
+}
+
+.landing-btn-create:hover {
+    background: #4d8be6;
+}
+
+.landing-footer {
+    position: fixed;
+    right: 2vw;
+    bottom: 1.5vh;
+    color: #b0b0b0;
+    font-size: 1rem;
+    z-index: 10;
+}
+
+.landing-footer a {
+    color: #b0b0b0;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    transition: color 0.2s;
+}
+
+.landing-footer a:hover {
+    color: #6ea8fe;
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Server port="8005" shutdown="SHUTDOWN">
+  <Listener className="org.apache.catalina.startup.VersionLoggerListener" />
+  <Listener className="org.apache.catalina.core.AprLifecycleListener" SSLEngine="on" />
+  <Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener" />
+  <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener" />
+  <Listener className="org.apache.catalina.core.ThreadLocalLeakPreventionListener" />
+
+  <Service name="Catalina">
+    <Connector port="8080" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443"
+               maxThreads="200"
+               minSpareThreads="10"
+               maxConnections="8192"
+               acceptCount="100"
+               enableLookups="false"
+               compression="on"
+               compressionMinSize="2048"
+               compressableMimeType="text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json" />
+
+    <Engine name="Catalina" defaultHost="localhost">
+      <Host name="localhost"  appBase="webapps"
+            unpackWARs="true" autoDeploy="true">
+        
+        <!-- Valves für Logging und Sicherheit -->
+        <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
+               prefix="localhost_access_log" suffix=".txt"
+               pattern="%h %l %u %t &quot;%r&quot; %s %b" />
+        
+        <!-- Session-Persistierung -->
+        <Manager className="org.apache.catalina.session.PersistentManager"
+                 saveOnRestart="true">
+          <Store className="org.apache.catalina.session.FileStore"
+                 directory="${catalina.home}/sessions" />
+        </Manager>
+        
+      </Host>
+    </Engine>
+  </Service>
+</Server>
